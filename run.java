@@ -9,6 +9,8 @@ public class run {
     public static void main(String args) {
         LogAnalyzer log = new LogAnalyzer();
         log.readFile(args); 
+        HashMap<String,Integer> counts = log.countVisitsPerIp();
         System.out.println("There is/are " + log.countUniqueIPs()+" Unique IP's");
+        System.out.println(counts);
     }
 }
